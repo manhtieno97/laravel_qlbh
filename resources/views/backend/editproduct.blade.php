@@ -51,6 +51,14 @@
 										</div>
 									</div>
 									<div class="form-group" >
+										<label>Tình trạng</label>
+										<select required name="condition" id="inputCondition" class="form-control" >
+											<option value="">--chọn tình trạng máy--</option>
+											<option value="Máy mới" @if ($product->condition=='Máy mới')selected @endif>Máy mới</option>
+											<option value="Máy đã sử dụng" @if ($product->condition=='Máy đã sử dụng')selected @endif>Máy đã sử dụng</option>
+										</select>
+									</div>
+									<div class="form-group" >
 										<label>Bảo hành</label>
 										<input required type="date" name="warranty" class="form-control" value="{{ $product->warranty }}">
 									</div>
@@ -61,13 +69,14 @@
 									<div class="form-group" >
 										<label>Trạng thái</label>
 										<select required name="status" class="form-control">
-											<option value="1" @if ($product->pro_status==1)checked @endif>Còn hàng</option>
-											<option value="0" @if ($product->pro_status==0)checked @endif>Hết hàng</option>
+											<option value="1" @if ($product->pro_status==1)selected @endif>Còn hàng</option>
+											<option value="0" @if ($product->pro_status==0)selected @endif>Hết hàng</option>
 					                    </select>
 									</div>
 									<div class="form-group" >
 										<label>Miêu tả</label>
-										<textarea class="ckeditor" required name="description">{{ $product->description }}</textarea>
+										<textarea class="ckeditor" required name="description" >{{ $product->description }}</textarea>
+
 									</div>
 									<div class="form-group" >
 										<label>Danh mục</label>

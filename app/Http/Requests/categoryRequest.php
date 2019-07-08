@@ -25,7 +25,7 @@ class categoryRequest extends FormRequest
     {
         
         return [
-            'name'=>'bail|required|unique:category,name',
+            'name'=>'bail|required',
         ];
     }
     public function messages()

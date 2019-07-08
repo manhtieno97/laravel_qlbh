@@ -5,8 +5,6 @@
 	<script src="js/easypiechart.js"></script>
 	<script src="js/easypiechart-data.js"></script>
 	<script src="js/bootstrap-datepicker.js"></script>
-	<script src="tinymce/tinymce.min.js"></script>
-    <script src="tinymce/config.js"></script>
 	<script>
 		$('#calendar').datepicker({
 		});
@@ -43,7 +41,17 @@
 		});
 		const anElement = new AutoNumeric('#autonumberic','integer');
 
-	</script>	
+	</script>
+	<script type="text/javascript">
+											CKEDITOR.replace( 'description', {
+								        filebrowserBrowseUrl: '{{ asset('backend/editor/ckfinder/ckfinder.html') }}',
+								        filebrowserImageBrowseUrl: '{{ asset('backend/editor/ckfinder/ckfinder.html?type=Images') }}',
+								        filebrowserFlashBrowseUrl: '{{ asset('backend/editor/ckfinder/ckfinder.html?type=Flash') }}',
+								        filebrowserUploadUrl: '{{ asset('backend/editor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}',
+								        filebrowserImageUploadUrl: '{{ asset('backend/editor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}',
+								        filebrowserFlashUploadUrl: '{{ asset('backend/editor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash') }}'
+								    } );
+										</script>	
 </body>
 
 </html>

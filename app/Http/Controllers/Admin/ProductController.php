@@ -45,6 +45,7 @@ class ProductController extends Controller
           'accessories'=>$accessorie,
           'warranty'=>$request->warranty,
           'promotion'=>$request->promotion,
+          'condition'=>$request->condition,
           'pro_status'=>$request->status,
           'description'=>$request->description,
           'cat_id'=>$request->cat_id,
@@ -69,6 +70,7 @@ class ProductController extends Controller
        $arr['accessories']=$request->accessories;
        $arr['warranty']=$request->warranty;
        $arr['promotion']=$request->promotion;
+       $arr['condition']=$request->condition;
        $arr['pro_status']=$request->status;
        $arr['description']=$request->description;
        $arr['cat_id']=$request->cat_id;

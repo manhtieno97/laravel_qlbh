@@ -19,7 +19,7 @@ class CreateCategoryTable extends Migration
             $table->tinyInteger('status');
             $table->string('cat_slug');
             $table->timestamps();
-            $table->time('deleted_at')->nullable();
+            $table->softDeletes();
         });
     }
 

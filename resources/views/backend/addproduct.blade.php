@@ -18,7 +18,7 @@
 						<form method="post" action="{{ asset('admin/product/add') }}" enctype="multipart/form-data">
 							@include('errors.note')
 							<div class="row" style="margin-bottom:40px">
-								<div class="col-xs-8">
+								<div class="col-md-10">
 									<div class="form-group" >
 										<label>Tên sản phẩm</label>
 										<input required type="text" name="name" value="{{ old('name') }}" class="form-control">
@@ -45,10 +45,18 @@
 													Tai nghe
 											</label>
 											<label>
-													<input type="checkbox" name="accessories" value="Balo">
+													<input type="checkbox" name="Balo" value="Balo">
 													Balo
 											</label>
 										</div>
+									</div>
+									<div class="form-group" >
+										<label>Tình trạng</label>
+										<select required name="condition" id="inputCondition" class="form-control" >
+											<option value="">--chọn tình trạng máy--</option>
+											<option value="Máy mới">Máy mới</option>
+											<option value="Máy đã sử dụng">Máy đã sử dụng</option>
+										</select>
 									</div>
 									<div class="form-group" >
 										<label>Bảo hành</label>
@@ -62,13 +70,15 @@
 									<div class="form-group" >
 										<label>Trạng thái</label>
 										<select required name="status" class="form-control">
+											<option value="">--Chọn trạng thái--</option>
 											<option value="1">Còn hàng</option>
 											<option value="0">Hết hàng</option>
 					                    </select>
 									</div>
 									<div class="form-group" >
 										<label>Miêu tả</label>
-										<textarea class="ckeditor" required name="description">{{ old('description') }}</textarea>
+										<textarea class="ckeditor" id="description" required name="description">{{ old('description') }}</textarea>
+										
 									</div>
 									<div class="form-group" >
 										<label>Danh mục</label>

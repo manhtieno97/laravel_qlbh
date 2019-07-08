@@ -22,6 +22,7 @@ class CreateProductTable extends Migration
             $table->date('warranty');
             $table->string('accessories')->nullable();
             $table->string('promotion');
+            $table->string('condition');
             $table->tinyInteger('pro_status');
             $table->text('description');
             $table->tinyInteger('featured');
